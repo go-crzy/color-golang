@@ -10,7 +10,7 @@ import (
 type webServer struct{}
 
 func (h *webServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte(`{"message": "red"}`))
+	w.Write([]byte(`{"color": "red"}`))
 }
 
 func log(next http.Handler) http.Handler {
